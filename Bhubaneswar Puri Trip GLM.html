@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhubaneswar & Puri — 5-Day Travel Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --card: #FFFFFF;
+    --primary: #2D6A4F;
+    --primary-light: #40916C;
+    --primary-pale: #D8F3DC;
+    --accent: #D4A574;
+    --accent-dark: #B8860B;
+    --text: #1A1A2E;
+    --text-secondary: #4A4A5A;
+    --muted: #8B8B9E;
+    --border: #E8E6E1;
+    --danger: #C0392B;
+    --tag-bg: #F0EDE8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== TITLE PAGE ===== */
+  .title-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    background: linear-gradient(160deg, #1A1A2E 0%, #2D3436 40%, #2D6A4F 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .title-page::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .title-page::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(45,106,79,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .title-page * { position: relative; z-index: 1; }
+
+  .title-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  .title-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+
+  .title-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+  }
+
+  .title-meta {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .title-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .title-meta-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .title-meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .title-desc {
+    max-width: 520px;
+    color: rgba(255,255,255,0.65);
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .title-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+    margin: 32px auto;
+    opacity: 0.6;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-6px); }
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 64px 0; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    max-width: 640px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+  }
+
+  /* ===== INTRO CARD ===== */
+  .intro-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .intro-card p { color: var(--text-secondary); font-weight: 300; margin-bottom: 16px; }
+  .intro-card p:last-child { margin-bottom: 0; }
+
+  .perfect-for {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .perfect-tag {
+    background: var(--primary-pale);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+
+  /* ===== BUDGET TABLE ===== */
+  .budget-table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  table { width: 100%; border-collapse: collapse; }
+
+  th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 16px 24px;
+    background: #F8F7F5;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .budget-cat {
+    font-weight: 500;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .budget-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .budget-amount { font-weight: 600; color: var(--text); text-align: right; }
+  .budget-inr { color: var(--muted); font-weight: 400; font-size: 12px; }
+
+  tr.total-row td {
+    background: var(--primary-pale);
+    font-weight: 600;
+    border-bottom: none;
+  }
+
+  .budget-bar-wrap { margin-top: 24px; padding: 0 24px 24px; }
+  .budget-bar {
+    height: 12px;
+    border-radius: 6px;
+    background: #EDE9E3;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .budget-bar-seg {
+    height: 100%;
+    transition: width 0.6s ease;
+  }
+
+  .bar-stay { background: var(--primary); width: 27%; }
+  .bar-food { background: var(--accent); width: 22%; }
+  .bar-act { background: #6C5CE7; width: 14%; }
+  .bar-trans { background: #00B894; width: 25%; }
+  .bar-extra { background: #BDC3C7; width: 12%; }
+
+  .budget-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ===== STAY SECTION ===== */
+  .stay-area {
+    background: linear-gradient(135deg, var(--primary) 0%, #1B4332 100%);
+    border-radius: 16px;
+    padding: 32px;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+
+  .stay-area h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .stay-area p { color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 300; }
+
+  .hotel-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .hotel-rank {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .hotel-info h4 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+  .hotel-location { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .hotel-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .hotel-feat {
+    font-size: 11px;
+    background: var(--tag-bg);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  .hotel-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .hotel-price span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .hotel-map {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 8px;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-light);
+  }
+
+  /* ===== DAY CARDS ===== */
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .day-header {
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .day-header-left { display: flex; align-items: center; gap: 14px; }
+
+  .day-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  .day-title { font-size: 18px; font-weight: 600; }
+  .day-subtitle { font-size: 13px; color: var(--muted); font-weight: 300; }
+
+  .day-cost-badge {
+    background: var(--primary-pale);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .day-body { padding: 0; }
+
+  .activity-row {
+    display: flex;
+    gap: 16px;
+    padding: 20px 28px;
+    border-bottom: 1px solid #F2F0EC;
+    align-items: flex-start;
+  }
+
+  .activity-row:last-child { border-bottom: none; }
+
+  .activity-time {
+    min-width: 72px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 2px;
+  }
+
+  .activity-content { flex: 1; }
+
+  .activity-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .activity-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .meta-item {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .meta-map {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-light);
+  }
+
+  .optional-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #FFF3E0;
+    color: #E67E22;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .free-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .hidden-gem-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #F3E5F5;
+    color: #7B1FA2;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .day-tips {
+    padding: 16px 28px;
+    background: #FDFCFB;
+    border-top: 1px solid var(--border);
+  }
+
+  .day-tips-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .day-tips p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ===== TIPS SECTION ===== */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .tip-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .tip-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+
+  .tip-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tip-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .tip-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 12px;
+  }
+
+  /* ===== CHECKLIST ===== */
+  .checklist {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px 24px;
+    margin-top: 20px;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 6px 0;
+  }
+
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .footer-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--border);
+    margin: 0 auto 20px;
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    body { font-size: 12px; }
+    .title-page { min-height: auto; padding: 40px 24px; }
+    .title-main { font-size: 36px; }
+    .title-sub { font-size: 24px; }
+    section { padding: 32px 0; }
+    .day-card { break-inside: avoid; }
+    .scroll-hint { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    .title-meta { gap: 20px; }
+    .hotel-card { flex-direction: column; gap: 12px; }
+    .activity-row { flex-direction: column; gap: 4px; padding: 16px 20px; }
+    .activity-time { min-width: auto; }
+    .day-header { padding: 20px; }
+    th, td { padding: 12px 16px; font-size: 13px; }
+    .budget-bar-wrap { padding: 0 16px 16px; }
+    .intro-card { padding: 24px; }
+    .checklist { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== TITLE PAGE ==================== -->
+<div class="title-page">
+  <div class="title-eyebrow">Custom Travel Guide</div>
+  <h1 class="title-main">Bhubaneswar & Puri</h1>
+  <p class="title-sub">Temples, Coast & Hidden Odisha</p>
+  <div class="title-divider"></div>
+  <div class="title-meta">
+    <div class="title-meta-item">
+      <span class="title-meta-value">5</span>
+      <span class="title-meta-label">Days</span>
+    </div>
+    <div class="title-meta-item">
+      <span class="title-meta-value">$500</span>
+      <span class="title-meta-label">Total Budget</span>
+    </div>
+    <div class="title-meta-item">
+      <span class="title-meta-value">2</span>
+      <span class="title-meta-label">Cities</span>
+    </div>
+    <div class="title-meta-item">
+      <span class="title-meta-value">~₹41,500</span>
+      <span class="title-meta-label">INR Approx.</span>
+    </div>
+  </div>
+  <p class="title-desc">
+    A curated journey through the temple capital of India and its sacred coastal twin — ancient architecture, pristine beaches, artisan villages, and flavors rarely found outside Odisha.
+  </p>
+  <div class="scroll-hint">Scroll to explore ↓</div>
+</div>
+
+<!-- ==================== INTRO ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">Overview</div>
+    <h2 class="section-title">Why This Trip?</h2>
+    <div class="intro-card">
+      <p>
+        Bhubaneswar is the "Temple City of India" — home to over 700 ancient temples spanning a thousand years of Kalinga architecture. Puri, just 60 km away, is one of Hinduism's four sacred Char Dham pilgrimage sites, with a beach that belongs equally to pilgrims and sunset-chasers.
+      </p>
+      <p>
+        Together, these cities offer something rare: a travel experience that is spiritually rich, architecturally stunning, genuinely uncrowded in most spots, and remarkably affordable. The local Odia cuisine — dalma, chhena poda, machha besara — is a world away from typical Indian restaurant food.
+      </p>
+      <p>This plan balances iconic landmarks with hidden gems, keeps you well-fed on local flavors, and stays comfortably within $500 for one person.</p>
+      <div class="perfect-for">
+        <span class="perfect-tag">Solo Travelers</span>
+        <span class="perfect-tag">Couples</span>
+        <span class="perfect-tag">Architecture Lovers</span>
+        <span class="perfect-tag">Cultural Explorers</span>
+        <span class="perfect-tag">Budget-Conscious</span>
+        <span class="perfect-tag">Photographers</span>
+        <span class="perfect-tag">Food Curious</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ==================== BUDGET ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">Finances</div>
+    <h2 class="section-title">Budget Breakdown</h2>
+    <p class="section-desc">Every rupee accounted for. Prices based on current 2024–2025 rates. Exchange rate used: $1 ≈ ₹83.</p>
+
+    <div class="budget-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th style="text-align:right">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="budget-cat"><div class="budget-icon" style="background:#D8F3DC;color:#2D6A4F">🏨</div>Hotel / Stay</div></td>
+            <td class="budget-amount">$135 <span class="budget-inr">(₹11,200)</span></td>
+          </tr>
+          <tr>
+            <td><div class="budget-cat"><div class="budget-icon" style="background:#FDEBD0;color:#D4A574">🍛</div>Food & Drinks</div></td>
+            <td class="budget-amount">$110 <span class="budget-inr">(₹9,100)</span></td>
+          </tr>
+          <tr>
+            <td><div class="budget-cat"><div class="budget-icon" style="background:#EDE7F6;color:#6C5CE7">🏛</div>Activities & Entry</div></td>
+            <td class="budget-amount">$70 <span class="budget-inr">(₹5,800)</span></td>
+          </tr>
+          <tr>
+            <td><div class="budget-cat"><div class="budget-icon" style="background:#E0F7FA;color:#00B894">🚗</div>Transportation</div></td>
+            <td class="budget-amount">$125 <span class="budget-inr">(₹10,400)</span></td>
+          </tr>
+          <tr>
+            <td><div class="budget-cat"><div class="budget-icon" style="background:#ECEFF1;color:#78909C">🛡</div>Emergency / Extra</div></td>
+            <td class="budget-amount">$60 <span class="budget-inr">(₹5,000)</span></td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>Total</strong></td>
+            <td style="text-align:right"><strong>$500</strong> <span class="budget-inr">(₹41,500)</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="budget-bar-wrap">
+        <div class="budget-bar">
+          <div class="budget-bar-seg bar-stay"></div>
+          <div class="budget-bar-seg bar-food"></div>
+          <div class="budget-bar-seg bar-act"></div>
+          <div class="budget-bar-seg bar-trans"></div>
+          <div class="budget-bar-seg bar-extra"></div>
+        </div>
+        <div class="budget-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:var(--primary)"></div>Stay 27%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div>Food 22%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#6C5CE7"></div>Activities 14%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#00B894"></div>Transport 25%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#BDC3C7"></div>Extra 12%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ==================== WHERE TO STAY ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">Accommodation</div>
+    <h2 class="section-title">Where to Stay</h2>
+
+    <div class="stay-area">
+      <h3>Best Area: Near Bhubaneswar Railway Station (Days 1–3) & Puri Beach Road (Days 4–5)</h3>
+      <p>Staying near Bhubaneswar station gives you walkable access to auto stands, cheap eateries, and easy connectivity to all temples. In Puri, the Chakratirtha Road / Beach Road strip puts the sea at your doorstep and the Jagannath Temple a short rickshaw ride away.</p>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-rank">1</div>
+      <div class="hotel-info">
+        <h4>Hotel Pushpak</h4>
+        <div class="hotel-location">📍 Bhubaneswar — Station Square, Platform Road</div>
+        <div class="hotel-features">
+          <span class="hotel-feat">AC Room</span>
+          <span class="hotel-feat">Free WiFi</span>
+          <span class="hotel-feat">Hot Water</span>
+          <span class="hotel-feat">Near Station</span>
+        </div>
+        <div class="hotel-price">₹800–1,000/night <span>($10–12)</span></div>
+        <a class="hotel-map" href="https://maps.google.com/?q=Hotel+Pushpak+Bhubaneswar+Station+Road">→ Search on Google Maps</a>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-rank">2</div>
+      <div class="hotel-info">
+        <h4>Hotel Pulin Puri</h4>
+        <div class="hotel-location">📍 Puri — Chakratirtha Road, Near Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feat">Sea View Rooms</span>
+          <span class="hotel-feat">Roof Top</span>
+          <span class="hotel-feat">AC</span>
+          <span class="hotel-feat">Walk to Beach</span>
+        </div>
+        <div class="hotel-price">₹1,200–1,500/night <span>($14–18)</span></div>
+        <a class="hotel-map" href="https://maps.google.com/?q=Hotel+Pulin+Puri+Chakratirtha+Road">→ Search on Google Maps</a>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-rank">3</div>
+      <div class="hotel-info">
+        <h4>Spree Shivafi Resort</h4>
+        <div class="hotel-location">📍 Puri — New Marine Drive Road</div>
+        <div class="hotel-features">
+          <span class="hotel-feat">Pool</span>
+          <span class="hotel-feat">Beach Access</span>
+          <span class="hotel-feat">Restaurant</span>
+          <span class="hotel-feat">Modern</span>
+        </div>
+        <div class="hotel-price">₹1,800–2,200/night <span>($22–26)</span></div>
+        <a class="hotel-map" href="https://maps.google.com/?q=Spree+Shivafi+Resort+Puri">→ Search on Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ==================== DAY 1 ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">The Journey</div>
+    <h2 class="section-title">Day-by-Day Itinerary</h2>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-header-left">
+          <div class="day-num">01</div>
+          <div>
+            <div class="day-title">Arrival & Temple Quarter</div>
+            <div class="day-subtitle">Bhubaneswar — Old Town Circuit</div>
+          </div>
+        </div>
+        <div class="day-cost-badge">~$22 / ₹1,830</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Lingaraj Temple <span class="free-tag">Free</span></div>
+            <div class="activity-desc">The crown jewel of Bhubaneswar's temples, dating to the 11th century. Dedicated to Lord Shiva as Harihara (half Shiva, half Vishnu). The towering 55m deul is covered in intricate carvings. Non-Hindus can view from an elevated platform outside — still breathtaking. Arrive by 7 AM to avoid crowds and catch the morning aarti glow.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 6:00 AM – 9:00 AM</span>
+              <span class="meta-item">💰 Free entry</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Lingaraj+Temple+Bhubaneswar">Lingaraj Temple on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Mid-Day</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch at Dalma Restaurant</div>
+            <div class="activity-desc">The best place in Bhubaneswar to try authentic Odia thali. Their signature dalma (dal cooked with vegetables and raw banana) is legendary. Order the veg thali with chhena poda for dessert. Clean, air-conditioned, and very affordable.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹200 ($2.40)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Dalma+Restaurant+Bhubaneswar">Dalma on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Mukteshwar & Rajarani Temples <span class="hidden-gem-tag">Hidden Gem</span> <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Walk 10 minutes from Lingaraj to Mukteshwar — a compact 10th-century gem with Odisha's most beautiful torana (arched gateway). The carved dwarfs, celestial maidens, and lion motifs are exquisite. Then take an auto to Rajarani Temple, known as the "love temple" for its erotic carvings. Set in a peaceful garden, it's often uncrowded. The laterite stone glows golden at this hour.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 1:00 PM – 4:00 PM</span>
+              <span class="meta-item">💰 Free</span>
+              <span class="meta-item">🚗 Auto: ₹50</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Mukteshwar+Temple+Bhubaneswar">Mukteshwar on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Dinner at Truptee</div>
+            <div class="activity-desc">A Bhubaneswar institution since 1962. Simple vegetarian Odia food — try the aloo dum, besara, and poori combo. No frills, just honest flavor. Very popular with locals.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹150 ($1.80)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Truptee+Restaurant+Bhubaneswar">Truptee on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Night</div>
+          <div class="activity-content">
+            <div class="activity-name">Ekamra Haat <span class="optional-tag">Optional</span> <span class="free-tag">Free</span></div>
+            <div class="activity-desc">An open-air crafts market designed like a traditional Odia village. Handloom sarees, silver filigree, palm leaf paintings, and pipili appliqué work. Great for browsing even if you don't buy. Live Odissi music some evenings.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ Closes 9 PM</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Ekamra+Haat+Bhubaneswar">Ekamra Haat on Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-tips">
+        <div class="day-tips-title">💡 Transport Tip</div>
+        <p>From the railway station to Old Town (Lingaraj area), take a shared auto for ₹20 or a dedicated auto for ₹60–80. The temple area is walkable once you're there. Ola/Uber are also available in Bhubaneswar.</p>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-header-left">
+          <div class="day-num">02</div>
+          <div>
+            <div class="day-title">Caves, Stupas & Tribal Art</div>
+            <div class="day-subtitle">Bhubaneswar — Western Circuit</div>
+          </div>
+        </div>
+        <div class="day-cost-badge">~$30 / ₹2,490</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Khandagiri & Udayagiri Caves</div>
+            <div class="activity-desc">Two hills facing each other, carved with 2nd-century BC Jain rock-cut caves. Udayagiri has the famous Rani Gumpha (Queen's Cave) with double-story carvings of musicians, dancers, and royal processions. Khandagiri offers a short hike to the top with panoramic views of Bhubaneswar. Go early — by 9 AM it gets hot.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 7:00 AM – 10:30 AM</span>
+              <span class="meta-item">💰 ₹25 each hill ($0.60 total)</span>
+              <span class="meta-item">🚗 Auto round trip: ₹300</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Khandagiri+Udayagiri+Caves+Bhubaneswar">Caves on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Mid-Day</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch at Bhatu Bhati</div>
+            <div class="activity-desc">A no-nonsense local eatery near Khandagiri. Serves hot dalma, rice, and fish curry on stainless steel thalis. The kind of place where auto drivers eat — which means it's good and cheap.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹120 ($1.45)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Bhatu+Bhati+Khandagiri+Bhubaneswar">Bhatu Bhati on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Dhauli Shanti Stupa <span class="hidden-gem-tag">Hidden Gem</span></div>
+            <div class="activity-desc">The peace pagoda built by Japanese monks atop Dhauli Hill — the exact site where Emperor Ashoka fought the Kalinga War in 261 BC, then embraced Buddhism. The white stupa against green hills with the Daya River below is deeply moving. The rock edicts of Ashoka are at the base. Almost zero foreign tourists here.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 1:30 PM – 3:30 PM</span>
+              <span class="meta-item">💰 Free</span>
+              <span class="meta-item">🚗 Auto from Khandagiri: ₹150</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Dhauli+Shanti+Stupa+Bhubaneswar">Dhauli on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Late Aft.</div>
+          <div class="activity-content">
+            <div class="activity-name">Odisha State Museum <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Back in the city, spend an hour here. Excellent collection of Jain and Buddhist sculptures, palm leaf manuscripts, tribal artifacts, and traditional Odia paintings. The epigraphy gallery alone is worth the visit. Air-conditioned — a nice break from the heat.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 4:00 PM – 5:30 PM</span>
+              <span class="meta-item">💰 Free (₹20 camera fee)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Odisha+State+Museum+Bhubaneswar">Museum on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Dinner at Odisha Hotel</div>
+            <div class="activity-desc">Near the museum area. Try their mutton curry (mansha tarkari) with steamed rice — a proper Odia non-veg meal. Also good: chungdi malai (prawn in coconut milk).</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹250 ($3)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Odisha+Hotel+Unit+3+Bhubaneswar">Odisha Hotel on Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-tips">
+        <div class="day-tips-title">💡 Transport Tip</div>
+        <p>Hire an auto for the full day (Khandagiri → Dhauli → Museum → Hotel) for ₹500–600. Negotiate upfront. Carry water — the caves have almost no shade. Wear shoes you can remove easily for temple entry.</p>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-header-left">
+          <div class="day-num">03</div>
+          <div>
+            <div class="day-title">Konark Sun Temple & Transfer to Puri</div>
+            <div class="day-subtitle">Bhubaneswar → Konark → Puri</div>
+          </div>
+        </div>
+        <div class="day-cost-badge">~$42 / ₹3,490</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Konark Sun Temple (UNESCO World Heritage Site)</div>
+            <div class="activity-desc">The 13th-century masterpiece shaped as a colossal chariot of the Sun God, with 24 carved stone wheels and seven horses. Every inch is covered in sculpture — erotic art, musicians, animals, deities. The wheels function as sundials. Arrive by 7 AM for golden light on the east-facing temple and near-empty grounds. This is one of India's greatest monuments.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 6:30 AM – 10:00 AM</span>
+              <span class="meta-item">💰 ₹40 ($0.50)</span>
+              <span class="meta-item">🚗 Bus from Bhubaneswar: ₹80 / Shared cab: ₹200</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Konark+Sun+Temple">Konark on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Mid-Day</div>
+          <div class="activity-content">
+            <div class="activity-name">Lunch at Priya Restaurant, Konark</div>
+            <div class="activity-desc">Simple, clean, and right near the temple. Good thali options and cold beverages after a hot morning. Not fancy — just reliable.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹180 ($2.15)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Priya+Restaurant+Konark">Priya on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Konark Beach & Chandrabhaga River <span class="hidden-gem-tag">Hidden Gem</span> <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Most tourists leave Konark after the temple. Don't. Walk 3 km to Chandrabhaga beach — a pristine, nearly empty stretch of sand where the Konark river meets the sea. Locals come here for a sacred dip during the annual Magha Saptami fair. The sunset here is unreal. Then take a bus or cab to Puri (35 km, 45 min).</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 1:00 PM – 4:00 PM</span>
+              <span class="meta-item">💰 Free</span>
+              <span class="meta-item">🚗 Konark → Puri bus: ₹50 / Cab: ₹400</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Chandrabhaga+Beach+Konark">Chandrabhaga on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Check-in & Puri Beach Walk <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Check into your Puri hotel. Then walk the beach at sunset — the stretch from Chakratirtha to Swargadwar is vibrant with fishermen, pilgrims, sand artists, and food stalls. Try the fresh roasted corn or a tender coconut.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 Hotel: ₹1,200 ($14)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Puri+Beach+Chakratirtha+Road">Puri Beach on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Dinner</div>
+          <div class="activity-content">
+            <div class="activity-name">Dinner at Chung Wah</div>
+            <div class="activity-desc">Surprisingly excellent Chinese-Indian food in Puri. A local favorite for decades. Try the chilli chicken and fried rice. A break from Odia food after two days.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹250 ($3)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Chung+Wah+Restaurant+Puri">Chung Wah on Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-tips">
+        <div class="day-tips-title">💡 Transport Tip</div>
+        <p>The most economical route: OSRTC bus from Bhubaneswar to Konark (₹80, 1.5 hrs), then another bus from Konark to Puri (₹50, 45 min). If you split a cab with other tourists at Konark, it's ₹150–200 per person. Book your Puri hotel in advance during festival season (June–July).</p>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-header-left">
+          <div class="day-num">04</div>
+          <div>
+            <div class="day-title">Sacred Puri & Artist Village</div>
+            <div class="day-subtitle">Puri — Jagannath, Raghurajpur & Market</div>
+          </div>
+        </div>
+        <div class="day-cost-badge">~$25 / ₹2,075</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Jagannath Temple <span class="free-tag">Free</span></div>
+            <div class="activity-desc">One of the four Char Dham — the abode of Lord Jagannath (Krishna). The massive 12th-century temple complex is alive with devotion, color, and incense. Non-Hindus cannot enter the inner sanctum but can view from the Raghunandan Library rooftop nearby (₹20 tip) for a stunning panoramic view. If you're Hindu, go inside early — the morning darshan is most peaceful. The kitchen here feeds 10,000+ people daily.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 6:00 AM – 9:00 AM</span>
+              <span class="meta-item">💰 Free</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Jagannath+Temple+Puri">Jagannath Temple on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Mid-Day</div>
+          <div class="activity-content">
+            <div class="activity-name">Temple Mahaprasad (Lunch)</div>
+            <div class="activity-desc">The sacred food of Jagannath, cooked in the world's largest kitchen. You can get mahaprasad at the Ananda Bazaar inside the temple complex (Hindus only) or from authorized stalls outside. Rice, dal, vegetables, and a unique sweet — all cooked in earthen pots over wood fire. An experience, not just a meal.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹100–150 ($1.20–1.80)</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Raghurajpur Heritage Village <span class="hidden-gem-tag">Hidden Gem</span></div>
+            <div class="activity-desc">Just 12 km from Puri, this is Odisha's most beautiful artisan village. Every house is decorated with pattachitra (traditional cloth-based scroll painting). Watch artists paint intricate mythological scenes using natural colors. You can buy directly from them — a pattachitra starts at ₹500. The village also produces palm leaf engravings, paper mache masks, and stone carvings. This is the most culturally rich experience of the entire trip.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 1:30 PM – 4:30 PM</span>
+              <span class="meta-item">💰 Free entry (buy art if you wish)</span>
+              <span class="meta-item">🚗 Auto round trip: ₹300</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Raghurajpur+Heritage+Village+Puri">Raghurajpur on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Evening</div>
+          <div class="activity-content">
+            <div class="activity-name">Puri Market (Bada Danda) & Dinner</div>
+            <div class="activity-desc">Walk the Grand Road leading to the temple — lined with shops selling religious souvenirs, seashell crafts, and the famous Puri rasagola (soft spongy cottage cheese balls in sugar syrup). Pick up a tin from Bhikari Halwai or Pahala rasagola stalls. For dinner, grab seafood at one of the beach shacks — try the machha besara (fish in mustard sauce).</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 Dinner ~₹200 ($2.40) + Snacks ~₹100</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Bada+Danda+Market+Puri">Bada Danda on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Night</div>
+          <div class="activity-content">
+            <div class="activity-name">Beach Stargazing <span class="optional-tag">Optional</span> <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Puri's beach is mostly free of light pollution toward the fishing village end. Walk 10 minutes past the main stretch, sit on the sand, and enjoy one of the clearest night skies you'll find on India's east coast.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-tips">
+        <div class="day-tips-title">💡 Transport Tip</div>
+        <p>Negotiate the Raghurajpur auto to ₹250–300 round trip with 1 hour wait time. Inside Jagannath Temple, you'll need to remove shoes and leather items. Keep belongings in the cloakroom (₹10). Beware of pandas (temple priests) aggressively demanding donations — a polite but firm "no" works.</p>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-header-left">
+          <div class="day-num">05</div>
+          <div>
+            <div class="day-title">Sunrise, Lake & Departure</div>
+            <div class="day-subtitle">Puri — Final Morning & Return to Bhubaneswar</div>
+          </div>
+        </div>
+        <div class="day-cost-badge">~$18 / ₹1,495</div>
+      </div>
+      <div class="day-body">
+        <div class="activity-row">
+          <div class="activity-time">Dawn</div>
+          <div class="activity-content">
+            <div class="activity-name">Puri Beach Sunrise <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Wake up at 5:15 AM and walk to the beach. Puri faces east, and the sunrise over the Bay of Bengal is spectacular — the sky turns coral, amber, then gold. Fishermen haul in their nets, seagulls wheel overhead, and the temple spire catches the first light. This single moment encapsulates everything beautiful about Puri.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 5:30 AM – 6:30 AM</span>
+              <span class="meta-item">💰 Free</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Morning</div>
+          <div class="activity-content">
+            <div class="activity-name">Gundicha Temple & Narendra Tank <span class="hidden-gem-tag">Hidden Gem</span> <span class="free-tag">Free</span></div>
+            <div class="activity-desc">Gundicha Temple is where Lord Jagannath stays during the famous Rath Yatra. It's just 2 km from the main temple but sees a fraction of the visitors — serene, tree-shaded, with beautiful gardens. Then walk to Narendra Tank, a massive sacred pond where the Chandan Yatra (boat festival) happens. The black stone structure in the center is photogenic. Both are free and take under 1.5 hours combined.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 7:00 AM – 8:30 AM</span>
+              <span class="meta-item">💰 Free</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Gundicha+Temple+Puri">Gundicha Temple on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Breakfast</div>
+          <div class="activity-content">
+            <div class="activity-name">Breakfast at a Beach Shack</div>
+            <div class="activity-desc">Aloor dom (spicy potato curry) with luchi (fried bread) and a cup of chai, sitting on a plastic chair with sand between your toes. Simple, perfect.</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 ~₹80 ($1)</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Late Morn.</div>
+          <div class="activity-content">
+            <div class="activity-name">Sudarshan Craft Museum <span class="free-tag">Free</span></div>
+            <div class="activity-desc">A small but excellent museum showcasing Odisha's craft traditions — stone carving, woodwork, metal work, and tribal art. The outdoor section has full-scale replicas of temple sculptures. Often missed by tourists because it's tucked away near the beach.</div>
+            <div class="activity-meta">
+              <span class="meta-item">⏰ 9:30 AM – 10:30 AM</span>
+              <span class="meta-item">💰 Free</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Sudarshan+Craft+Museum+Puri">Sudarshan Museum on Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="activity-row">
+          <div class="activity-time">Afternoon</div>
+          <div class="activity-content">
+            <div class="activity-name">Return to Bhubaneswar & Departure</div>
+            <div class="activity-desc">Take the Puri–Bhubaneswar Passenger Train (₹50, 1.5 hrs) or an OSRTC bus (₹80, 2 hrs). The train is faster and more comfortable. If your flight/train is in the evening, spend your last hours at Odisha State Museum (if missed on Day 2) or grab a final meal at Dalma before heading to the airport. Biju Patnaik Airport is 15 min from the city center by cab (₹300).</div>
+            <div class="activity-meta">
+              <span class="meta-item">💰 Train: ₹50 ($0.60) + Airport cab: ₹300 ($3.60)</span>
+              <span class="meta-item">💰 Final meal: ~₹200 ($2.40)</span>
+              <a class="meta-map" href="https://maps.google.com/?q=Biju+Patnaik+International+Airport+Bhubaneswar">Airport on Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-tips">
+        <div class="day-tips-title">💡 Transport Tip</div>
+        <p>Book the Puri–Bhubaneswar train ticket a day in advance via IRCTC or at the Puri station counter. Unreserved general tickets are always available but seats aren't guaranteed. For the airport, pre-book an Ola or negotiate with a fixed-rate cab stand near the station to avoid haggling.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ==================== TIPS ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">Essential Knowledge</div>
+    <h2 class="section-title">Travel Tips & Mistakes to Avoid</h2>
+    <p class="section-desc">Things I wish someone had told me before my first Odisha trip.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#D8F3DC;color:#2D6A4F">🌤</div>
+        <h4>Best Time to Visit</h4>
+        <ul>
+          <li>October–March: Pleasant weather, 20–30°C</li>
+          <li>June–July: Rath Yatra (massive crowds)</li>
+          <li>April–May: Very hot (40°C+), avoid</li>
+          <li>Aug–Sep: Rainy but lush and green</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#FDEBD0;color:#D4A574">⚠️</div>
+        <h4>Mistakes to Avoid</h4>
+        <ul>
+          <li>Don't pay "donation" at temples — it's optional</li>
+          <li>Don't skip Raghurajpur — it's the trip's highlight</li>
+          <li>Don't take a cab from the airport without fixing price</li>
+          <li>Don't wear shorts at Jagannath or Lingaraj temples</li>
+          <li>Don't drink tap water — stick to bottled</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#EDE7F6;color:#6C5CE7">🛡</div>
+        <h4>Safety Tips</h4>
+        <ul>
+          <li>Odisha is very safe — violent crime is rare</li>
+          <li>Beach currents can be strong — don't swim far</li>
+          <li>Keep phone charged — power cuts happen</li>
+          <li>Carry a photocopy of your ID</li>
+          <li>Use official prepaid auto stands at railway stations</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#E0F7FA;color:#00B894">💸</div>
+        <h4>Saving Money</h4>
+        <ul>
+          <li>Shared autos are 1/5th the cost of private ones</li>
+          <li>OSRTC buses are clean and reliable</li>
+          <li>Most temples are free — don't pay "guides"</li>
+          <li>Eat at local joints, not hotel restaurants</li>
+          <li>Bottled water: buy 1L bottles (₹20) not small ones</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#FFF3E0;color:#E67E22">📱</div>
+        <h4>Connectivity</h4>
+        <ul>
+          <li>Jio has the best network in both cities</li>
+          <li>Get a local SIM if staying 5+ days</li>
+          <li>Free WiFi at most budget hotels (unreliable)</li>
+          <li>Download offline Google Maps for both cities</li>
+          <li>Ola and Uber work in Bhubaneswar, limited in Puri</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-icon" style="background:#FCE4EC;color:#C0392B">🍛</div>
+        <h4>Must-Try Foods</h4>
+        <ul>
+          <li>Dalma — the signature Odia dish</li>
+          <li>Chhena Poda — baked cottage cheese "cake"</li>
+          <li>Machha Besara — fish in mustard gravy</li>
+          <li>Rasagola — Puri's version is different (softer)</li>
+          <li>Chungdi Malai — prawns in coconut milk</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ==================== CHECKLIST ==================== -->
+<section>
+  <div class="container">
+    <div class="section-label">Preparation</div>
+    <h2 class="section-title">Before You Go — Checklist</h2>
+    <div class="checklist">
+      <div class="checklist-grid">
+        <div class="check-item"><div class="check-box"></div>Book flights to BBI (Bhubaneswar)</div>
+        <div class="check-item"><div class="check-box"></div>Book hotels in advance</div>
+        <div class="check-item"><div class="check-box"></div>Download offline Google Maps</div>
+        <div class="check-item"><div class="check-box"></div>Install Ola / Uber app</div>
+        <div class="check-item"><div class="check-box"></div>Carry light cotton clothes</div>
+        <div class="check-item"><div class="check-box"></div>Pack a scarf/shawl for temples</div>
+        <div class="check-item"><div class="check-box"></div>Sunscreen (SPF 50+)</div>
+        <div class="check-item"><div class="check-box"></div>Sunglasses & hat</div>
+        <div class="check-item"><div class="check-box"></div>Comfortable walking shoes</div>
+        <div class="check-item"><div class="check-box"></div>Slip-on sandals (for temples)</div>
+        <div class="check-item"><div class="check-box"></div>Light rain jacket / umbrella</div>
+        <div class="check-item"><div class="check-box"></div>Power bank (10,000 mAh+)</div>
+        <div class="check-item"><div class="check-box"></div>Hand sanitizer & wet wipes</div>
+        <div class="check-item"><div class="check-box"></div>Basic medications (paracetamol, ORS)</div>
+        <div class="check-item"><div class="check-box"></div>Photocopy of ID / passport</div>
+        <div class="check-item"><div class="check-box"></div>Cash in ₹500 & ₹100 notes</div>
+        <div class="check-item"><div class="check-box"></div>Small backpack for day trips</div>
+        <div class="check-item"><div class="check-box"></div>Camera (phone is fine)</div>
+        <div class="check-item"><div class="check-box"></div>Check Rath Yatra dates if June/July</div>
+        <div class="check-item"><div class="check-box"></div>Inform hotel of late arrival if needed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer">
+  <div class="footer-divider"></div>
+  <p>Bhubaneswar & Puri — 5-Day Custom Travel Guide</p>
+  <p style="margin-top:4px">Budget: $500 · All prices in USD with INR equivalents · Rates as of 2024–2025</p>
+  <p style="margin-top:12px; font-size:11px; color:#B0B0BE;">Prices may vary. Always confirm locally. This guide is for planning purposes.</p>
+</div>
+
+</body>
+</html>
